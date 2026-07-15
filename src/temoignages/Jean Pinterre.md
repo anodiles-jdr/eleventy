@@ -1,5 +1,5 @@
 ---
-Témoignage de: Jean Pinterre
+temoignageDe: Jean Pinterre
 Surnom: descendant des premiers humains d’Herganat
 Origine: Humaine
 Faction: République
