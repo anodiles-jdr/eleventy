@@ -1,4 +1,5 @@
 ---
+tags: temoignages
 temoignageDe: Joan Amelibre
 Surnom: descendant des premiers humains d’Herganat
 Origine: Humaine

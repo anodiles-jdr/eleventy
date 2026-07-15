@@ -16,20 +16,20 @@ layout: layouts/base.njk
 
 <section id="temoignages">
 
-  <h2>Témoignages</h2>
+  <h2>Témoignages2</h2>
 
   <div class="cards">
 
-    {% for temoignage in collections.temoignages %}
+    {% for temoignages in collections.temoignages %}
       <article class="card">
 
         <h3>
-          <a href="{{ temoignage.url }}">{{ temoignage.data.temoignageDe }}</a>
+          <a href="{{ temoignages.url }}">{{ temoignages.data.temoignageDe }}</a>
         </h3>
 
-        <p>{{ temoignage.data.surnom }}</p>
+        <p>{{ temoignages.data.surnom }}</p>
 
-        <small>{{ temoignage.data.faction }}</small>
+        <small>{{ temoignages.data.faction }}</small>
 
       </article>
     {% endfor %}
