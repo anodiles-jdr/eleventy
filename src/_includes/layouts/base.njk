@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title or site.title }}</title>
+
+  /assets/css/style.css
+</head>
+
+<body>
+
+  {% include "partials/header.njk" %}
+
+  <main class="container">
+    {{ content | safe }}
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="hero">
+
+  <h2>
+    Archives des témoins
+  </h2>
+
+  <p>
+    Fragments de mémoire recueillis après la Révolution.
+  </p>
+
+</section>
+
+<section id="temoignages">
+
+  <h2>Index</h2>
+
+  <div class="cards">
+
+    {% for temoignage in collections.temoignages %}
+
+      <article class="card">
+
+        <h3>
+          {{ temoignage.url }}
+            {{ temoignage.data.temoignageDe }}
+          </a>
+        </h3>
+
+        <p>{{ temoignage.data.surnom }}</p>
+
+        <small>
+          {{ temoignage.data.faction }}
+        </small>
+
+      </article>
+
+    {% endfor %}
+
+  </div>
+
+</section>

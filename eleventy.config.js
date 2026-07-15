@@ -1,11 +1,16 @@
-export default function (eleventyConfig) {
+export default function(eleventyConfig) {
+
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  eleventyConfig.addCollection("témoignages", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/témoignages/*.md");
+  });
 
   return {
     dir: {
       input: "src",
-      output: "_site",
       includes: "_includes",
-    },
+      output: "_site"
+    }
   };
 }

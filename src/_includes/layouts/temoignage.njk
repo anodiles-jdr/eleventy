@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="temoignage">
+
+  <header class="fiche">
+
+    <h1>{{ temoignageDe }}</h1>
+
+    <dl>
+
+      <dt>Surnom</dt>
+      <dd>{{ surnom }}</dd>
+
+      <dt>Origine</dt>
+      <dd>{{ origine }}</dd>
+
+      <dt>Faction</dt>
+      <dd>{{ faction }}</dd>
+
+      <dt>Période</dt>
+      <dd>{{ periode }}</dd>
+
+    </dl>
+
+  </header>
+
+  <section class="contenu">
+    {{ content | safe }}
+  </section>
+
+  <nav class="retour">
+    /← Retour aux archives</a>
+  </nav>
+
+</article>

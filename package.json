@@ -7,7 +7,20 @@
     "build": "eleventy",
     "start": "eleventy --serve"
   },
-  "dependencies": {
+  "description": "",
+  "main": "eleventy.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anodiles-jdr/eleventy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anodiles-jdr/eleventy/issues"
+  },
+  "homepage": "https://github.com/anodiles-jdr/eleventy#readme",
+  "devDependencies": {
     "@11ty/eleventy": "^3.1.6"
   }
 }
