@@ -13,26 +13,56 @@ body {
 }
 
 /* =========================================================
-   BANDEAU COMPACT — titre + nav sur une seule ligne
+   BANDEAU COMPACT — titre + nav en dessous, alignés à gauche
    ========================================================= */
 .site-header {
   display: flex;
-  align-items: center;
-  justify-content: center;   /* ← au lieu de space-between */
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  flex-direction: column;      /* titre puis nav, empilés */
+  align-items: flex-start;     /* tout aligné à gauche */
+  gap: .4rem;                  /* petit espace titre / nav = compact */
 
   background: #000;
   color: #fff;
   padding: .75rem clamp(1rem, 4vw, 2rem);
   border-bottom: 4px solid #000;
 }
+
 .site-title {
   margin: 0;
   font-size: clamp(1.1rem, 3vw, 1.6rem);
   letter-spacing: 0.2rem;
   text-transform: uppercase;
-  white-space: nowrap;
+}
+
+/* --- Navigation sous le titre, légèrement en retrait --- */
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding-left: .2rem;         /* ← le retrait que tu demandes */
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .05rem;
+  padding: .15rem .5rem;
+  border: 2px solid transparent;
+  transition: background .2s, color .2s;
+}
+
+.nav-list a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.nav-list a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
 }
 
 /* --- Navigation intégrée dans la barre --- */
