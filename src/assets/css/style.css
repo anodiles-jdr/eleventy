@@ -12,95 +12,29 @@ body {
   line-height: 1.8;
 }
 
-/* =========================================================
-   BANDEAU COMPACT — titre + nav en dessous, alignés à gauche
-   ========================================================= */
-.site-header {
-  display: flex;
-  flex-direction: column;      /* titre puis nav, empilés */
-  align-items: flex-start;     /* tout aligné à gauche */
-  gap: .4rem;                  /* petit espace titre / nav = compact */
+/* Bandeau */
 
+.site-header {
   background: #000;
-  color: #fff;
-  padding: .75rem clamp(1rem, 4vw, 2rem);
-  border-bottom: 4px solid #000;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  border-bottom: 8px solid black;
 }
 
 .site-title {
   margin: 0;
-  font-size: clamp(1.1rem, 3vw, 1.6rem);
-  letter-spacing: 0.2rem;
+
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
-
-/* --- Navigation sous le titre, légèrement en retrait --- */
-.nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding-left: .2rem;         /* ← le retrait que tu demandes */
-}
-
-.nav-list a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: .8rem;
-  letter-spacing: .05rem;
-  padding: .15rem .5rem;
-  border: 2px solid transparent;
-  transition: background .2s, color .2s;
-}
-
-.nav-list a:hover {
-  background: #fff;
-  color: #000;
-}
-
-.nav-list a:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 2px;
-}
-
-/* --- Navigation intégrée dans la barre --- */
-.nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: .85rem;
-  letter-spacing: .05rem;
-  padding: .3rem .7rem;
-  border: 2px solid transparent;            /* cadre au survol uniquement */
-  transition: background .2s, color .2s;
-}
-
-.nav-list a:hover {
-  background: #fff;
-  color: #000;
-}
-
-.nav-list a:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 2px;}
-
 
 /* Navigation */
 
 .nav-list {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 2rem;
 
   list-style: none;
@@ -207,7 +141,7 @@ body {
 /* Témoignage */
 
 .contenu p:first-child {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 
   font-weight: bold;
 
