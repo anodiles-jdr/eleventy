@@ -18,16 +18,15 @@ body {
 .site-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;   /* ← au lieu de space-between */
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
 
   background: #000;
   color: #fff;
-  padding: .75rem clamp(1rem, 4vw, 2rem);   /* barre fine */
+  padding: .75rem clamp(1rem, 4vw, 2rem);
   border-bottom: 4px solid #000;
 }
-
 .site-title {
   margin: 0;
   font-size: clamp(1.1rem, 3vw, 1.6rem);
@@ -178,7 +177,7 @@ body {
 /* Témoignage */
 
 .contenu p:first-child {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 
   font-weight: bold;
 
