@@ -1,199 +1,194 @@
-/* =========================================================
-   ANODILES — feuille de style
-   Style : néo-brutalisme éditorial (serif + traits nets)
-   Modernisation : dark mode auto, typo fluide, container queries
-   ========================================================= */
-
-/* --- Design tokens ------------------------------------- */
 :root {
-  color-scheme: light dark;                 /* active le dark mode natif */
-
-  --paper: light-dark(#f6f3ea, #14140f);    /* fond */
-  --ink:   light-dark(#111,    #f6f3ea);    /* texte */
-  --grey:  light-dark(#666,    #999);       /* texte secondaire */
-  --trait: light-dark(#000,    #f6f3ea);    /* bordures, ombres, traits */
-  --card:  light-dark(#fff,    #1e1e17);    /* fond des blocs blancs */
-
-  --mesure: 68ch;                           /* largeur de lecture idéale */
+  --paper: #f6f3ea;
+  --ink: #111;
+  --grey: #666;
 }
-
-/* --- Reset minimal ------------------------------------- */
-*, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, serif;
   line-height: 1.8;
-  font-size: clamp(1rem, 0.4vw + 0.95rem, 1.15rem);
 }
 
-/* Transition douce entre les pages (dégradation propre) */
-@view-transition { navigation: auto; }
-
 /* =========================================================
-   BANDEAU
+   BANDEAU COMPACT — titre + nav sur une seule ligne
    ========================================================= */
 .site-header {
-  background: var(--trait);
-  color: var(--paper);
-  padding: clamp(1.5rem, 5vw, 3rem) 0;
-  text-align: center;
-  border-bottom: 8px solid var(--trait);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  background: #000;
+  color: #fff;
+  padding: .75rem clamp(1rem, 4vw, 2rem);   /* barre fine */
+  border-bottom: 4px solid #000;
 }
 
 .site-title {
   margin: 0;
-  font-size: clamp(1.8rem, 6vw, 3rem);
-  letter-spacing: 0.3rem;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
-  line-height: 1.1;
+  white-space: nowrap;
 }
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+/* --- Navigation intégrée dans la barre --- */
 .nav-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .85rem;
+  letter-spacing: .05rem;
+  padding: .3rem .7rem;
+  border: 2px solid transparent;            /* cadre au survol uniquement */
+  transition: background .2s, color .2s;
+}
+
+.nav-list a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.nav-list a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;}
+
+
+/* Navigation */
+
+.nav-list {
+  display: flex;
   justify-content: center;
   gap: 2rem;
+
   list-style: none;
   margin-top: 2rem;
   padding: 0;
 }
 
 .nav-list a {
-  color: var(--paper);
+  color: white;
+
   text-decoration: none;
+
   text-transform: uppercase;
-  border: 2px solid var(--paper);
+
+  border: 2px solid white;
+
   padding: .5rem 1rem;
-  transition: background .2s, color .2s;
 }
 
 .nav-list a:hover {
-  background: var(--paper);
-  color: var(--trait);
+  background: white;
+  color: black;
 }
 
-.nav-list a:focus-visible {
-  outline: 3px solid var(--paper);
-  outline-offset: 3px;
-}
+/* Contenu */
 
-/* =========================================================
-   CONTENU
-   ========================================================= */
 .container {
   width: min(1000px, 90%);
   margin: 3rem auto;
 }
 
 .hero {
-  border: 6px solid var(--trait);
+  border: 6px solid black;
+
   padding: 2rem;
-  background: var(--card);
+
+  background: white;
+
   margin-bottom: 3rem;
-  box-shadow: 12px 12px 0 var(--trait);   /* signature "hard shadow" */
 }
 
-/* =========================================================
-   CARTES
-   ========================================================= */
+/* Cartes */
+
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
   gap: 2rem;
 }
 
 .card {
-  container-type: inline-size;            /* carte "consciente" de sa largeur */
-  background: var(--card);
-  border: 4px solid var(--trait);
+  background: white;
+
+  border: 4px solid black;
+
   padding: 1.5rem;
-  transition: transform .2s, box-shadow .2s;
+
+  transition: 0.2s;
 }
 
 .card:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 8px 8px 0 var(--trait);
+  transform: translate(-4px,-4px);
+
+  box-shadow: 8px 8px 0 black;
 }
 
 .card h3 {
   margin-top: 0;
+
   text-transform: uppercase;
 }
 
-/* Quand la carte est large, on aère le titre */
-@container (min-width: 340px) {
-  .card h3 { font-size: 1.5rem; letter-spacing: .1rem; }
-}
+/* Fiche témoin */
 
-/* =========================================================
-   FICHE TÉMOIN
-   ========================================================= */
 .fiche {
-  border: 8px solid var(--trait);
-  background: var(--card);
+  border: 8px solid black;
+
+  background: white;
+
   padding: 2rem;
+
   margin-bottom: 3rem;
 }
 
 .fiche h1 {
   text-transform: uppercase;
+
   margin-top: 0;
-  font-size: clamp(1.6rem, 5vw, 2.5rem);
-  border-bottom: 4px solid var(--trait);
+
+  border-bottom: 4px solid black;
+
   padding-bottom: 1rem;
 }
 
-/* Attributs façon "étiquettes tamponnées" */
-.fiche dl {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .75rem;
-  margin: 0 0 2rem 0;
-}
-
 .fiche dt {
-  background: var(--trait);
-  color: var(--paper);
-  padding: .1rem .6rem;
-  font-size: .8rem;
+  font-weight: bold;
+
   text-transform: uppercase;
-  align-self: center;
 }
 
 .fiche dd {
-  margin: 0;
-  align-self: center;
-  font-weight: bold;
+  margin: 0 0 1rem 0;
 }
 
-/* =========================================================
-   TÉMOIGNAGE
-   ========================================================= */
+/* Témoignage */
+
 .contenu p:first-child {
-  font-size: clamp(1.15rem, 2vw + .8rem, 1.4rem);
+  font-size: 1.2rem;
+
   font-weight: bold;
-  border-left: 10px solid var(--trait);
+
+  border-left: 10px solid black;
+
   padding-left: 1rem;
+
   margin-bottom: 2rem;
 }
 
 .contenu p {
   text-align: justify;
-  max-width: var(--mesure);   /* confort de lecture */
-}
-
-/* =========================================================
-   ACCESSIBILITÉ — respecte "réduire les animations"
-   ========================================================= */
-@media (prefers-reduced-motion: reduce) {
-  .card,
-  .nav-list a { transition: none; }
-  .card:hover { transform: none; }
-  @view-transition { navigation: none; }
 }
