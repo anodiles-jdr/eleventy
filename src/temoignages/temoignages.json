@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/temoignage.njk",
+  "tags": "temoignages",
+  "permalink": "/temoignages/{{ temoignageDe | slugify }}/"
+}
