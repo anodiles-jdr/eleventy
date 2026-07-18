@@ -17,14 +17,13 @@ body {
 .site-header {
   background: #000;
   color: white;
-  padding: 2cm 0;
+  padding: 0.75rem 0; /* au lieu de 1cm */
   text-align: center;
-  border-bottom: 8px solid black;
+  border-bottom: 4px solid black; /* 8px c'est aussi assez épais */
 }
 
 .site-title {
   margin: 0;
-
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -38,7 +37,7 @@ body {
   gap: 1rem;
 
   list-style: none;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 0;
 }
 
@@ -69,11 +68,11 @@ body {
 .hero {
   border: 6px solid black;
 
-  padding: 2rem;
+  padding: 1rem;
 
   background: white;
 
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Cartes */

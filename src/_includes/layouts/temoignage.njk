@@ -30,8 +30,11 @@ layout: layouts/base.njk
     {{ content | safe }}
   </section>
 
-  <nav class="retour">
-    /← Retour aux archives</a>
-  </nav>
+  {% if retour %}
+<nav class="retour">
+ <a href="{{ retour.url | url }}">← Retour aux archives</a>
+</nav>
+{% endif %}
+
 
 </article>
