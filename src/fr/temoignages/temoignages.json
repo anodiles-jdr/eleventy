@@ -1,6 +1,6 @@
 {
   "layout": "layouts/temoignage.njk",
-  "tags": "temoignages",
+  "tags": ["temoignages", "temoignages_fr"],
   "permalink": "/fr/temoignages/{{ temoignageDe | slugify }}/",
   "retour": { "url": "/#temoignages", "label": "Retour aux archives" }
 }

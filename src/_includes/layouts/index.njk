@@ -20,20 +20,21 @@ layout: layouts/base.njk
 
   <div class="cards">
 
-    {% for temoignages in collections.temoignages %}
+    {% set collectionName = "temoignages_" + lang %}
+    {% for item in collections[collectionName] %}
       <article class="card">
 
         <h3>
-  <a href="{{ temoignages.url | url }}">{{ temoignages.data.temoignageDe }}</a>
+  <a href="{{ item.url | url }}">{{ item.data.temoignageDe }}</a>
 </h3>
 
-        <p>{{ temoignages.data.surnom }}</p>
+        <p>{{ item.data.surnom }}</p>
 
-        <small>{{ temoignages.data.faction }}</small>
+        <small>{{ item.data.faction }}</small>
 
       </article>
     {% endfor %}
 
-  </div>
+  </div>>
 
 </section>
