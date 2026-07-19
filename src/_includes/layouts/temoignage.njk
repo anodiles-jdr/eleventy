@@ -2,8 +2,10 @@
 layout: layouts/base.njk
 ---
 
+{# Layout pour l'affichage d'un témoignage individuel #}
 <article class="temoignage">
 
+  {# En-tête de la fiche avec les métadonnées du témoignage #}
   <header class="fiche">
 
     <h1>{{ temoignageDe }}</h1>
@@ -26,10 +28,12 @@ layout: layouts/base.njk
 
   </header>
 
+  {# Corps principal du témoignage #}
   <section class="contenu">
     {{ content | safe }}
   </section>
 
+  {# Lien de retour vers la liste des archives si configuré #}
   {% if retour %}
 <nav class="retour">
  <a href="{{ retour.url | url }}">← Retour aux archives</a>

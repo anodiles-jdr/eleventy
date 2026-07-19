@@ -15,7 +15,7 @@ Mais ce dont je peux parler, moi, c'est du nécrocauste. Pas de sa doctrine, pas
 
 Ce que le nécrocauste a laissé derrière lui, ce n'est pas seulement des villages vides, des terres brûlées ou des os épars. C'est un gouffre dans l'âme. Un refus.
 Un refus de vivre pour ceux qui vous réduisent à un corps à vider.
-Un refus de leur offrir encore une part de vous — ni votre souffle, ni votre dignité, ni la moindre étincelle de votre esprit
+Un refus de leur offrir encore une part de vous — ni votre souffle, ni votre dignité, ni la moindre étincelle de votre esprit.
 
 Ce refus, nous l'avons porté pendant des générations. Certains disent que c'est grâce à lui que nous avons survécu. D'autres pensent qu'il nous a déchirés.
 Moi, je pense qu'il nous a définis.
